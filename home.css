@@ -1,0 +1,257 @@
+/* home.css atualizado */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 90%;
+    max-width: 1000px;
+    padding: 12px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.profile-pic img, .user-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff5a78;
+}
+
+header input {
+    flex: 1;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    outline: none;
+    transition: all 0.3s;
+}
+
+header input:focus {
+    border-color: #ff5a78;
+    box-shadow: 0 0 0 3px rgba(255, 90, 120, 0.1);
+}
+
+#logoutButton {
+    background: linear-gradient(90deg, #ff5a78, #ff029e);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+#logoutButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 90, 120, 0.2);
+}
+
+/* Main Content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding-bottom: 50px;
+}
+
+/* Post Container */
+.post-container {
+    background: white;
+    width: 100%;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.post-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.post-profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff5a78;
+}
+
+.post-header span {
+    font-weight: 600;
+    color: #333;
+}
+
+.date {
+    margin-left: auto;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Post Content */
+.post-content {
+    margin-left: 10px;
+}
+
+.post-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.post-text {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-family: "Dancing Script", cursive;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.post-text p {
+    margin-bottom: 10px;
+}
+
+.post-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Comment Section */
+.comment-section {
+    margin-top: 20px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.comment-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.comment-section input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    outline: none;
+}
+
+.comment-section input:focus {
+    border-color: #ff5a78;
+}
+
+.comment-btn {
+    background: linear-gradient(90deg, #ff5a78, #ff029e);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.comment-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 90, 120, 0.2);
+}
+
+.comments {
+    margin-top: 15px;
+}
+
+.comments p {
+    margin: 8px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.comments p:last-child {
+    border-bottom: none;
+}
+
+.comments strong {
+    color: #ff5a78;
+}
+
+/* Like Button */
+.like {
+    margin-top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.like:hover {
+    color: #ff5a78;
+    transform: scale(1.1);
+}
+
+.like.active {
+    color: #ff5a78;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        width: 95%;
+        padding: 10px 15px;
+    }
+    
+    .post-container {
+        padding: 20px;
+    }
+    
+    .comment-input-container {
+        flex-direction: column;
+    }
+    
+    .comment-btn {
+        width: 100%;
+    }
+}
